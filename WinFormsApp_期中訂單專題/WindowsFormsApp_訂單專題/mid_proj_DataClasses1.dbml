@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="mid_proj" Class="mid_proj_DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=mid_proj;Integrated Security=True" SettingsObjectName="WindowsFormsApp_訂單專題.Properties.Settings" SettingsPropertyName="mid_projConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Orders" Member="Orders">
+    <Type Name="Orders">
+      <Column Name="O_ID" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="O_datetime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="INorOUT" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Tel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.order_detail" Member="order_detail">
+    <Type Name="order_detail">
+      <Column Name="O_ID" Type="System.String" DbType="NVarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="No" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="main" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="qty_main" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="is_mealset" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="beverage" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="qty_beverage" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="sweet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="qty_sweet" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="total" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Product" Member="Product">
+    <Type Name="Product">
+      <Column Name="P_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="P_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="P_type" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="P_price" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="P_image" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
